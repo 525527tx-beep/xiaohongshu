@@ -298,5 +298,7 @@ footer .result-trigger{width:351px!important;height:44px!important;border:0!impo
 /* Final device-layer rule: render the Dynamic Island above all screen states. */
 @media (min-width:480px){
   body::after{display:block!important;content:"";position:fixed;z-index:1000;left:50%;top:calc(50% - 406px);width:126px;height:34px;transform:translateX(-50%);pointer-events:none;border:1px solid rgba(255,255,255,.18);border-radius:0 0 20px 20px;background:radial-gradient(circle at 83% 50%,#6490c9 0 5%,#1d2940 7%,transparent 9%),#030303;box-shadow:0 1px 3px rgba(0,0,0,.9),inset 0 -1px 1px rgba(255,255,255,.14)}
+  /* The main CTA is a body sibling, so pin it to the device screen rather than the document. */
+  body>footer{position:fixed!important;z-index:20!important;left:50%!important;right:auto!important;top:auto!important;bottom:calc(50% - 406px)!important;width:375px!important;transform:translateX(-50%)!important}
 }
 </style>
