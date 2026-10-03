@@ -62,6 +62,27 @@
 .app > nav .case,.app > nav .history{align-self:center!important;margin:0!important}
 </style>
 <style>
+/* Result screen uses the exact same centered 375 × 812 viewport as the device. */
+@media (min-width:480px){.result-overlay{top:50%!important;transform:translate(-50%,-50%)!important}}
+</style>
+<style>
+/* Align the original form canvas with the same centered desktop device frame. */
+@media (min-width:480px){
+  body{height:100vh!important;min-height:812px!important;overflow:hidden!important}
+  .app{width:375px!important;height:812px!important;min-height:812px!important;overflow:hidden!important}
+  .app .content{height:716px!important;overflow-y:auto!important;padding-bottom:104px!important}
+  footer{position:absolute!important;top:auto!important;bottom:0!important;left:0!important;transform:none!important;width:375px!important}
+}
+</style>
+<style>
+/* Keep the generated page inside the desktop phone's visible screen. */
+@media (min-width:480px){.generate-overlay{align-items:center!important}}
+.generate-nav{display:flex!important;align-items:center!important}
+.generate-nav-title{top:0!important;height:44px!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.generate-back{display:flex!important;align-items:center!important;justify-content:center!important}
+.generate-back::after{margin:0!important;height:20px!important;line-height:20px!important}
+</style>
+<style>
 /* Desktop presentation shell: keep the interaction canvas at phone size and frame it. */
 @media (min-width:480px){
   body{min-height:100vh!important;display:grid!important;place-items:center!important;background:radial-gradient(circle at 50% 34%,#27272d 0,#141416 43%,#09090a 100%)!important}
