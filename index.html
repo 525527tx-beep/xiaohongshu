@@ -62,6 +62,10 @@
 .app > nav .case,.app > nav .history{align-self:center!important;margin:0!important}
 </style>
 <style>
+/* Do not leave the form's fixed CTA visible beside the result screen. */
+body:has(.result-overlay)>footer{display:none!important}
+</style>
+<style>
 /* Result screen uses the exact same centered 375 × 812 viewport as the device. */
 @media (min-width:480px){.result-overlay{top:50%!important;transform:translate(-50%,-50%)!important}}
 </style>
