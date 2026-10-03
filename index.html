@@ -294,3 +294,9 @@ footer .result-trigger{width:351px!important;height:44px!important;border:0!impo
 .result-download::before{left:8px!important;top:7px!important;width:14px!important;height:12px!important;border:0!important;border-radius:0!important;background:#fff!important;clip-path:polygon(6px 0,8px 0,8px 7px,11px 7px,7px 11px,3px 7px,6px 7px)!important}
 .result-download::after{left:9px!important;top:21px!important;width:12px!important;height:1px!important;border:0!important;border-radius:1px!important;background:#fff!important;transform:none!important}
 </style>
+<style>
+/* Final device-layer rule: render the Dynamic Island above all screen states. */
+@media (min-width:480px){
+  body::after{display:block!important;content:"";position:fixed;z-index:1000;left:50%;top:calc(50% - 406px);width:126px;height:34px;transform:translateX(-50%);pointer-events:none;border:1px solid rgba(255,255,255,.18);border-radius:0 0 20px 20px;background:radial-gradient(circle at 83% 50%,#6490c9 0 5%,#1d2940 7%,transparent 9%),#030303;box-shadow:0 1px 3px rgba(0,0,0,.9),inset 0 -1px 1px rgba(255,255,255,.14)}
+}
+</style>
