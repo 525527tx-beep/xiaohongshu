@@ -399,3 +399,13 @@ footer .result-trigger{width:351px!important;height:44px!important;border:0!impo
 .result-footer button{width:351px!important;height:44px!important;border-radius:12px!important;background:#ff0048!important;color:#fff!important;font:600 16px/22px "PingFang SC","PingFang","苹方",sans-serif!important}
 .result-footer::after{bottom:9px!important;width:134px!important;height:5px!important;background:#575759!important}
 </style>
+<script>
+/* Preview-only: skip the introductory generation screen and open the result flow directly. */
+window.addEventListener('load', () => {
+  document.querySelectorAll('.generate-overlay').forEach((node) => node.remove());
+  const cta = document.querySelector('.cta');
+  if (!cta) return;
+  cta.classList.remove('cta');
+  cta.classList.add('result-trigger');
+});
+</script>
